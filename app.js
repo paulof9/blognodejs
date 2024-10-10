@@ -9,6 +9,12 @@ import admin from './routes/admin.js';
 
 //import mongoose from "mongoose"
 
+/*
+Utilizava-se o bodyparser porem em versoes atuais do express ele já está imbutido.
+#Então, bodyparser:
+app.use(express.urlencoded({extented:true: true})
+app.use(express.json())
+*/
 //Configurações
     app.use(express.json());
     app.use(express.urlencoded({extended: true}))
