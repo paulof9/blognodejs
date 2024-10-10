@@ -7,14 +7,6 @@ const app = express();
 import { engine } from "express-handlebars";
 import admin from './routes/admin.js';
 
-//import mongoose from "mongoose"
-
-/*
-Utilizava-se o bodyparser porem em versoes atuais do express ele já está imbutido.
-#Então, bodyparser:
-app.use(express.urlencoded({extented:true: true})
-app.use(express.json())
-*/
 //Configurações
     app.use(express.json());
     app.use(express.urlencoded({extended: true}))
@@ -26,6 +18,14 @@ app.use(express.json())
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = dirname(__filename);
     app.use(express.static(path.join(__dirname,"public"))) //arquivos estaticos
+    //MongooseDB
+    import mongoose from "mongoose"
+    mongoose.Promise = global.Promise;
+    mongoose.connect("mongodb://localhost/blogapp").then(() => {
+        console.log("Conectado ao mongo!")
+    }).catch((err) => {
+        console.log("Erro ao se conectar"+err)
+    })
 
 //Rotas
 app.get("/", function(req, res){
