@@ -2,7 +2,7 @@
 node_modules/
 #tailwind archives
     src/
-    output.css
+    public/css/output.css
 #others
 logs
 *.log
