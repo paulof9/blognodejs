@@ -1,6 +1,9 @@
+#node
 node_modules/
-src/
-#
+#tailwind archives
+    src/
+    output.css
+#others
 logs
 *.log
 .env
