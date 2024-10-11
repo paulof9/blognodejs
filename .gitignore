@@ -1,5 +1,5 @@
 node_modules/
-
+src/
 #
 logs
 *.log
@@ -20,4 +20,3 @@ tmp/
 *~
 *.bak
 *.swp
-src/
