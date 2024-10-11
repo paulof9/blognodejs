@@ -1,9 +1,9 @@
-#node
+#Node modules
 node_modules/
-#tailwind archives
-    src/
-    public/css/output.css
-#others
+#Tailwind archives
+src/
+public/css/output.css
+#Others
 logs
 *.log
 .env
